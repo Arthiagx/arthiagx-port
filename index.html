@@ -22,11 +22,11 @@
 <body>
     <!-- Navbar -->
     <nav id="desktop-nav">
-        <div class="logo">Thiago Henrique</div>
+        <div class="logo"><span>Thiago</span> Henrique</div>
         <div>
             <ul class="nav-links">
                 <li><a href="#about">Sobre</li>
-                <li><a href="#experience">Experiência</a></li>
+                <li><a href="#experience">Educação</a></li>
                 <li><a href="#projects">Projetos</a></li>
                 <li><a href="#contact">Contato</a></li>               
             </ul>
@@ -42,7 +42,7 @@
         </div>
         <div class="menu-links">
             <li><a href="#about" onclick="toggleMenu()">Sobre</a></li>
-            <li><a href="#experience" onclick="toggleMenu()">Experiência</a></li>
+            <li><a href="#experience" onclick="toggleMenu()">Educação</a></li>
             <li><a href="#projects" onclick="toggleMenu()">Projetos</a></li>
             <li><a href="#contact" onclick="toggleMenu()">Contato</a></li>
         </div>
@@ -51,22 +51,18 @@
     <!-- Perfil -->
     <section id="profile">
         <div class="section__pic-container">
-            <img src="/assets/img/LogoArthiagx.png" alt="Arthiagx Logo">
+            <img src="/assets/img/LogoArthiagx.png" alt="Arthiagx Logo" height="350px">
         </div>
         <div class="section__text">
             <p class="section__text__p1">Olá! Eu sou</p>
             <h1 class="title">Thiago Henrique</h1>
-            <p class="section__text__p2">Desenvolvedor Frontend</p>
+            <p class="section__text__p2">Estudante de Tecnologia, Desenvolvedor Frontend e Mobile.</p>
             <!-- <div class="btn-container">
                 <button class="btn btn-color-2">
                 <a href="/assets/CV-TI.pdf"  onclick="window.open()"></a> Download CV
                 </button>                 -->
-                <div class="btn-container">
-                    <button 
-                    class="btn btn-color-1" onclick="location.href='./#contact'"> Contato
-                    </button>
-            </div>
-            <div class="socials-container">
+                
+        <div class="socials-container">
                 <ul>
                     <a href="https://www.linkedin.com/in/thiago-76a183276/">
                         <li style="--cor1: #7abfff; --cor2: #031657;">
@@ -81,7 +77,7 @@
                         </li>
                     </a>
                     <a href="mailto:thiago.art95@gmail.com">
-                        <li style="--cor1: #455974; --cor2: #0b053d;">
+                        <li style="--cor1: #f10000; --cor2: #000000;">
                             <span class="icon"><i class="bi bi-envelope-fill"></i></span>
                             <span class="text">E-Mail</span>
                         </li>
@@ -92,7 +88,50 @@
                             <span class="text">WhatsApp</span>
                         </li>
                     </a>                    
-                </ul>   
+                </ul>
+            </div>
+        </div>
+    </div>
+    </section>
+<!-- Sobre -->
+    <section id="about">
+        <p class="section__text__p1">Saiba mais sobre mim <i class="bi bi-arrow-down-short"></i></p>
+        <p class="title">Educação <i class="bi bi-book"></i></p>
+        <div class="section-container">
+            <!-- <div class="section__pic-container">
+                <img src="./assets/img/about-me.png" alt="Imagem perfil" class="about-pic">
+            </div> -->
+            <div class="about-details-container">
+                <div class="about-containers">
+                    <div class="details-container">                    
+                        <h3>Análise e Desenvolvimento de Sistemas</h3>
+                        <p>Universidade Mogi das Cruzes - 2023/2025 (cursando).<br>
+                            Desenvolvimento de habilidades de programação e codificação, analise e modelagem sistemas de informação,
+                            gerenciamento de projetos de TI, compreensão e aplicaçaõ de metodologias ágeis de desenvolvimento de software,
+                            manutenção e suporte a sistemas, comunicação de forma clara e eficiente com usuários e clientes.</p>
+                    </div>
+                    <div class="details-container">                    
+                        <h3>Java COMPLETO Programação Orientada a Objetos
+                        </h3>
+                        <p>Udemy - 2023 (concluído).<br>
+                            Programação Orientada a Objetos e linguagem Java, criação de soluções flexíveis,
+                             extensíveis e testáveis, base sólida teórica e prática, aplicação do conhecimento de orientação 
+                             a objetos na construção de soluções para problemas reais, compreensão de diagramas de classe UML, 
+                             tanto de entidades quanto de serviços, aplicações para desktop com interface gráfica, 
+                             construção de web services usando Spring Boot e boas práticas, acesso a banco de dados NoSQL, 
+                             acesso a banco de dados relacionais com comandos SQL (JDBC) e também com ORM (JPA/Hibernate).</p>
+                    </div>                    
+                    <div class="details-container">                    
+                        <h3>Curso Web Moderno Completo com JavaScript
+                        </h3>
+                        <p>Udemy - 2023/2024 (concluído).<br>
+                            Aplicações modernas para Web com recursos recursos de HTML 5, CSS 3, Javascript, React, Vue, Bootstrap 4, jQuery, NodeJs.
+                            Paradigmas de programação funcional, orientação a objeto, boas práticas de programação e padrões de projeto, 
+                            aplicações Web baseadas em componentes. Desenvolvimento Fullstack, frontend e backend, banco de dados relacional 
+                            e não relacional NoSQL, MySQL, Postgres e MongoDB, builds Gulp e Webpack.
+                            Angular 9: Componentes, Diretivas, Pipes e Services.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>

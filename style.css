@@ -56,6 +56,10 @@ a:hover {
 .logo {
     font-size: 1.3rem;
 }
+.logo span {
+    font-weight: bold;
+}
+
 .logo:hover {
     cursor: default;
 }
@@ -137,23 +141,92 @@ a:hover {
 
 /* Sessões */
 
+section {
+    padding-top: 4vh;
+    height: 96vh;
+    margin: 0 10rem;
+    box-sizing: border-box;
+    min-height: fit-content;
+}
+
+
+/* Sessão Profile */
+
+#profile {
+    display: flex;
+    justify-content: center;
+    gap: 5rem;
+    height: 80vh;
+}
+
+.section__pic-container {
+    display: flex;
+    height: 400px;
+    width: 400px;
+    margin: 0 auto;
+    align-self: center;    
+    }
+
+    .section__pic-container {
+        animation: jump 2s linear infinite;
+    }
+    
+    @keyframes jump {
+        0% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-2px);
+        }
+        100% {
+            transform: translateY(0);
+        }
+    }
+    
+
+.section__text {
+    align-self: center;
+    text-align: center;
+}
+
+.section__text p {
+    font-weight: 600;
+}
+
+.section__text__p1 {
+    font-size: 1.75rem;
+    margin-bottom: 1rem;
+}
+
+.section__text__p1 {
+    text-align: center;
+}
+
+.title {
+    font-size: 2rem;
+    text-align: center;
+}
 
 /* Icones sociais */
 
-.socials-container ul{
-    align-items:top center;
-    justify-content: center;
+#socials-container{
     display: flex;
-    position: relative;
+    justify-content: center;
+    align-items: center;
+    margin: 1rem;
+    gap: 1rem;
+}
+
+.socials-container ul{
+    display: flex;
     gap: 10px;
-    height: 30vh;
 }
 .socials-container ul li{
     width: 50px;
     height: 50px;
 
     background-color: #ffffff;
-    box-shadow: 0 8px 15px #424242c5;
+    box-shadow: 0 0px 15px #424242c5;
     border-radius: 30px;
 
     display: flex;
