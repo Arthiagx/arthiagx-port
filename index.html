@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Arthiagx</title>
 
+    <!-- boxicons -->
+    
+
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
@@ -25,10 +28,10 @@
         <div class="logo"><span>Thiago</span> Henrique</div>
         <div>
             <ul class="nav-links">
-                <li><a href="#about">Educação</li>
                 <li><a href="#experience">Experiência</a></li>
                 <li><a href="#projects">Projetos</a></li>
-                <li><a href="#contact">Contato</a></li>               
+                <li><a href="#about">Sobre</li>
+                <!-- <li><a href="#contact">Contato</a></li>                -->
             </ul>
         </div>
     </nav>
@@ -40,11 +43,11 @@
             <span></span>
             <span></span>
         </div>
-        <div class="menu-links">
-            <li><a href="#about" onclick="toggleMenu()">Educação</a></li>
+        <div class="menu-links">            
             <li><a href="#experience" onclick="toggleMenu()">Experiência</a></li>
             <li><a href="#projects" onclick="toggleMenu()">Projetos</a></li>
-            <li><a href="#contact" onclick="toggleMenu()">Contato</a></li>
+            <li><a href="#about" onclick="toggleMenu()">Sobre</a></li>
+            <!-- <li><a href="#contact" onclick="toggleMenu()">Contato</a></li> -->
         </div>
         </div>
     </nav>
@@ -57,10 +60,8 @@
             <p class="section__text__p1">Olá! Eu sou</p>
             <h1 class="title">Thiago Henrique</h1>
             <p class="section__text__p2">Estudante de Tecnologia, Desenvolvedor Frontend e Mobile.</p>
-            <!-- <div class="btn-container">
-                <button class="btn btn-color-2">
-                <a href="/assets/CV-TI.pdf"  onclick="window.open()"></a> Download CV
-                </button>                 -->
+            <div class="btn-container">                
+                <button class="btn" onclick="downloadCV()">Download CV</button> 
                 
         <div class="socials-container">
                 <ul>
@@ -90,13 +91,130 @@
                     </a>                    
                 </ul>
             </div>
+        </div>        
+    </div> 
+</section>
+
+<!-- Experiência -->
+<section id="experience">
+    <p class="section__text__p1">Meu Background</p>
+    <h1 class="title">Acadêmico <i class="bi bi-person-workspace"></i></h1>
+    <div class="experience-details-container">
+        <div class="about-containers">
+            <div class="details-container">
+                <h2 class="experience-sub-title">Tecnologias</h2>
+                <div class="article-container">
+                        <div>
+                            <h3><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAb9JREFUSEvV1UuoT1EUx/HPVWREMaKkSBSSV3mUR16FFEWUQgZKKWXCgPJIUZgYGMhjQCEmRCFJSRgoosRAwpCkGIicVevqOjl3n/51k11nsvdvre9er3269PHq6mP//gngKSZ2GFnYTupp+7cIbmNBh4CwXVQCnMe6DgHnsL4EOIbtKVqFTwXYkCqll1NzFDtKgF04mKIJeF4AhOZZanbiUAmwCadSNB93cQRTG0CDMDnPNuJsCbC8cnY1RWtxARerSFa3qMtS3CgBpuNRirbhOMZiWAMgwFvzbAqelAAj8SZFB7C7cPOoV9Qt1gi8KwEG4luK3ldt97oBcBjXcRKbUzMA30uAOP+MKN5DRGfMwd4aaEXW6hqW4SOG1i/T9BbFrUcnYAaim+7UjGM/LvAY06rhfIlxbQH3MSvTMyaNxmN2VZMfeIAXuf82c38Pc9sCrmAlvmZ+w/hDzXh4NSPzcAb9camCrmkLOIEtNfErBCiczUR3ZN2yaOdo6z9WUw32tWjPuq892N8WMAobqlwvQQxev4ZW/ZlDeROne8zPb3mbP9pgLMTifOujyLfyi/f/S2+D2AZQGOTej/9/wC+swE0ZUpiktgAAAABJRU5ErkJggg=="/>
+                                 HTML</h3>
+                            <p>Nível intermediário.</p> 
+                        </div>
+                        <div>
+                            <h3><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAcZJREFUSEvF1UvITWEUxvHfFzGQKDOlzCQGKBlIFKHkkoHMRDJzSULJTAkpXxgpmUkGcokiuYwM5JKSqTATCROX2KsWbbuzz7udOn1vncHZ73rW/33W+5x9Rgx5jQy5vzEBnMHcAZ29wM66tpeDa1g7ICC060uAc9g+ICC0O0qAIziURafwqQCbgj1ZE9rDJcAujGbRPDwvAObjSdaE9nQJsAmXsuhZHwexFydfjVtZH9rLJcAy3OtwB1ewEVtxPutD+6AEmI2XDcCrmqs/W09xFQdxNB+GNmr/rl4xnYb3DcDDytXSFlcRhN25F9oPJUBAv2F8rfArHjcAx3ETF6tTb66S971yMhG/SoDYf4fp1Y8mxrAXiytgRLC+1uF63lfM/i1mNF22vYuicUQ0khIxXIIYU30tTFcx81l5mAVdARG7iN9rzEzRnHTyo9p7VAvCR0zNca3pCriALYhmZ3ED9/N79JiA5ZXDDbVXQ2gisv+sthEdw/5G7eeceVx+nHRSj0s/0BWwr2pwoiWWbY9Dc7IrINKwDSur18AijGvp+jPv407+mt90BdTrJmMFViUwmt7Oz1186ed0TP4y/3P0/cuH7uA3NCNTGc7pG8UAAAAASUVORK5CYII="/>
+                                 CSS</h3>
+                            <p>Nível intermediário.</p> 
+                        </div>
+                        <div>   
+                            <h3><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAShJREFUSEvt1b8rhXEUx/HXTbFZ5McgA4pFiQys/AWUzXAzKIOymGwGmxJSSjYbf4LVYDdaTBhkEIsf3299Hz3R7f6+Ge53eYbvc87nvD/nPOcpaPIpNDm/lgt8NYjop/DfBG2BzOG2RWVn7f9atIQBHOENW7jFJDYxmNhqJujDCK6xhhOM4hELuKhXoDcljAJTuMMTngNVvMsqr5kgL7CBA8wEgnWsoKNegrxFn9jFfqKYxhW6cyR/tmm5XdSP4dSDbFY/Uj9OQ/K91OyKLYrBx5jFeLCkB/M4wyrm0iRdhmlaDhbtYLsagheM4SH3aR2m5NGSOKLZ6cJNmKSJagRi8D3O8Y4hFFPG10QXn51YTMXE64otKrsTSrxQUqDWhCXjWv5PbjjBN42gOxnLfKPpAAAAAElFTkSuQmCC"/>
+                                 Javascript</h3>
+                            <p>Nível intermediário.</p> 
+                        </div> 
+                        <div>
+                            <h3><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAmxJREFUSEu11VvIjlkUB/DfZy4wJcWVjMNI5kKRInNDymkQOeTC4YKSkJKrkRSTKIfmwjGHEjHNBZNTNIoSciGllFOUnCKhQXJmL+23nu/xPu87N9+63Hvt9V9r/f9r7RZtbC1tHF8zgPaYht8wEL3xBXdxBSfxDz5UJdoIYBy25aCNCr2NBThdz6kKYFXKdGVF1Ds4iLf5/leMxe9YX35TD6Aq+BFsxDWMRH98wiH0RdwvwaYiSBlgIo6WsjiFtXiEdZhSun+H7vg3gQzCcFyo+RQBOuEmuhUC7Milr8Yi/FDRtgA4hz64kQXxPnyLAEHU9kKAAzloVDC0Acub8Vfi4WLBZ3JuWSuA45iQnV6hF/5MkpxTETwy3IDduT39Cn67Ukvnlyu4hx7Z6Rgm4X4K8FM+iyyvYlRK5FJKYA/GpC78kYjtUkriMgaXAd4kEjtmx9foiS2YWXgcw/Uf2mEIOlRU9xxdywAvEUTX7DzmJlWcKVTWaOCKdxGrcxkg2P+lFCFaMjupJ1QULfu/FrMSc9KK5FBNsR21YC/yYP2MKD1aNyPvpyrAvTVxFGU6K03k/tKLGK5Qw4+Z4OsIhe3L8zK1AmF6XietKgiCI0DIM+xJ2pQD0s5ZlldAKOxhIWDMzMI6ALfyu5jw79b1aMRghS3F01zVzkz23/nuQdqgj2tSLIB8xog81d+O6y275ViTyY3ZCGU9w4k6ei8XsBhbi4dV63pFlmhwMixn1ejviE8oNmmsjVbW6FGsjVh2scgaWXw483C2nlOzLzMmNZQyPhMXAohs49OJdRB8HcbHqgyaATRJvvl1mwN8BS7tcxl4+oUpAAAAAElFTkSuQmCC"/>
+                                 SASS</h3>
+                            <p>Nível básico.</p> 
+                        </div>
+                        <div>
+                            <h3><i class="bi bi-filetype-sql"></i> SQL</h3>
+                            <p>Nível intermediário.</p> 
+                        </div>                        
+                        <div>
+                            <h3><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAYpJREFUSEvt00+IjgEQx/HP5qLkQspJKaUUskfJRaQk1sXFQY4O29amSHIRBweJHJSkJCkbRaJtS9I6bPl/8K84uRB2/SkRMxr1vm+rZ/ewJ+/cnueZ+f1mvjNPjxmOnhnW1zVoJPx/ITqB5ViHn41sKmE6iL7gLZZMVTzzOg0OYU0J/MIDHMVsvMJHPMS7MDqPG7jZYvg9JryDk/gwmcELLMKRwrENz3AQF/G8pujFXGzALTyJ/MvR0FasxEihbJsgC8ar61XV1aMyOoXdWB8TDiPfL8UgcjeHsR/z8B6fq4E2g7W4jbPYhYV4iR8YxcYQmx+iEyXwFPcrdzsuxfMWXMFjrOhE1I/jeIPXUbAMC7Av2A/gGxZXYe4hG0lUieR07GoO0mhWNLYDFzoNsmAnxpAXkzEUoudwNSa4h73F9kC9P4OvVZP5Oe0xXP+7+NYryq5yrOT45wIaYnXs5C6uYfO/clsNcvOf4gz7mpTr+6aYdE+hSESTxnR+tCn6tqd1DRqxdRE1IvoNBmRNGf3s7hcAAAAASUVORK5CYII="/>
+                                 PHP</h3>
+                            <p>Nível básico.</p> 
+                        </div>
+                        <div>
+                            <h3><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAj1JREFUSEu11UmozlEYBvDfNRfCArFBmYuwUaYkhSxkZWksZVqbsiBshJKkDGXBRoYoJSWSFJIyL8wSC5lWQs5b57ud++/7fNfNPfXfnPOe93mf93nO+2/Ryaulk/PrKEA/fGlPce0F6ItvRcK1OPi/AIZgBG7mhOMQAOs6CjAMr4rL+7EXr/PeLOzCjI4AzEV3XMqXo4XfMRrv8t4gfMA8XG4GUmrQDU8wBr/yxWDzEnNwtUh2GguwKDG5UgGJnL1zYW1ctAL70hcOqa2hufJDWFPsD8a1XMyZ3LJ7mIm4c6oWWzI4j+jvgCJRV3xFsAtxnxdnPbEBCzEynx3BiZJRCfAQY5P9BqaLn4qgY0n05SnR7dTzafjZrO+NAELEoLcY54qgAA3wLjiKVe0ACLaPI65kcCu5Zyqi4pWVJJuTu3bmvbPYhgd1gKKIaFvkiq8NwPHkmGX50qTE5H4lwW5sLPYu4gKeIUSfnKpegi3J1ifriTy7sGKghyOq/R6PPdmiVQKhUTjtTiMNYv8upuSAsGaMg991WtE/6RQsa+s9ntbTpjrsourrRWC81Hix/7ICPCwcr73uuN6KHUXG6PHSmmhNkEZlg7RqVW9cx6Pajk2VZDeykz5mB/3I5+GccF/YO0Senqz8tp7I1eLWJ6rhnJgr1RXiP0ojogeGo1di+SKxnJ9d1Rrf7IczITtjdYN2RqIY7YdxoDbg/uaiRi2OSsPGE5NN++Bz6vWb/MJjAjdczRj8i3vqxnY6wB8lX2AZuYM3QAAAAABJRU5ErkJggg=="/>
+                                 jQuery</h3>
+                            <p>Nível intermediário.</p> 
+                        </div>
+                        <div>
+                            <h3><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAfNJREFUSEvNlT1IHVEQhb/nT0BJITYmIFgYQTsLESUQopWFYkLUSsVCSCFGQrQSUwTSqIigjYhYaBNJAmoniEkKRaysLJSAIGIlgRCLGH/2hHmyXvbuqvDAW72dmTPnnrkz81Jk+KQynJ97Q/AI6ADaTfE8MAccJVUgTsFDoMWS1gFZTrJzYM2IPgN/oshcgmygwZI2A3kOaAP+l7XGsZ8Ai0a2Apyl/S7Bc7uVT3mbEXyKKY3UfvMRlAa33/OAD4AS8+0DxZ445fjpI8gB/totXfwAMGpG/R6OILgAHgD/fASyqzOKImqsTnpm9h8Wl+/ECfs4bIvqoi2gygFOAG+AL2Z/BUwCPU6csNVJBF+Bl6EgyX5iZUu/j75l13f4ksKK/OpEKRgH+kIxar8XwKBz24/AEtAUsgv7NongXegxFavW/e7pmHpgNeQTdiyJoBVYsKBtoBLoBqYdEtlmgB2g3HzCaqpjS6Qp1cTqdNp0rgO1DoFsT4GuYD5mzSfsZhKB2uzQ5qERKAgpciulXfUbWLb+F/baAvQtO+2hEaDMU3vXvAv026Nf88Vt01ygN1hcQ6YiiutXsGU/2EycRgXc5A+n0JK8BrRKdLQKpoD3wQAex6m8CUEaXxEoUZ8rucqh7kk8tyFITHbXEt0pcRqUcQWXr+pTGSaIKk8AAAAASUVORK5CYII="/>
+                                 Angular</h3>
+                            <p>Nível intermediário.</p> 
+                        </div>
+                        <div>
+                            <h3><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAApRJREFUSEvF1UuolWUUBuBHy7CadBETyaIiM5NUCkmxwhBBKwcVODCUSpQwqahAB0XgJCpTjILKCjKkQTQQmpRSUGKIYUSRNSkiLQyCHJml9b2yNvxtz5ZzBgcX7MH+1uVd612Xf4xRljGjHN+ZAK7CVvyK17G/L5lb8CAuw6P4aahkzwSwDy9gIlbiezyCc/FaA52Md/E7Hse8kQBMwg7cUU5jsQlLMQ7v4Gn8W/o9WNKA/uwHGVTBNZX9PR2H8fgBJxv4VBzv6D7C/TgyXIBL8CHmlkMSeR+fVwU3YVkn2AGkJ38NFyB24Tw0zMK9uKgF/a4CTMcf+ABft6qeQd5Ok36KzsMqPIwr8CY+aZltwG34pyKk0V9gIxbggTZRP+OV8vm7h9QFuBq7sL1lu6UFvh1344L2ex6hYX05Poc5eKJoeQ978RTuq+H4JbZdgPCbef6ygmRafsRXbQfuwjY8VLpUlko/xjRkZ3rVzS/KFvUDZEIyHV3J26dYjc9ahXGOJJlbG41v1SBc33FK0ulVgP9XQcqfUHyHw2S1s95uLMqy0ZEABiSgGdfF1YP08MXa6pf6AfJ/TTkn60uLnmOYWY3vVpfs07Ns9A04WhW+Wo0+ZTvUoiWLjGXu0LeV4YziOz2JZBFDUUY59tGvrbHt9WIgQBQ5DWn2bGSD72wVvYzHSre5AmYZs1yZsNieJoNOxeV10BK4JwuL33Owrprf0434VGQnQlHGsydT6mTnFt2MQx3dbizHb/0lDKrg/OL3uupBLuUbtbnhPBO3op3oZH4hDuLKdlpODBcgds/WVmZK8m14sv3/pgLk2KUP19ZNervoG3YPeoYJlC/a4aEaWFlfXOM8pMlZ/SYPSHpkz6NewX+ZKoAZ+/DQ/AAAAABJRU5ErkJggg=="/>
+                                 React</h3>
+                            <p>Nível intermediário.</p> 
+                        </div>
+                        <div>
+                            <h3><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAddJREFUSEvN1DuMTlEQwPHfenUKhZYIycoqdDRCp0AlotmCQiKIR3QKoVKIRIhHJCLqjWyziUdUSDahEo1HNCgVCiqPcCeZK2fP7t3v7pesmOY7M9+ZmTMz/7kjFllGFjm+f5rgFkazopd4gDOpf8Z+/E49HjaB1alfwG5sTv0tDse5rGAPpoqW7cAdrE/bUdzM8xHcyPNrnMKjwjeS3a8ThP4E2zscv2Bt/vcBq/JcP+QxdrbJ6hmM4RWW5oXT2NbY9qZ+Jas+kfpkE2wal1L/hY1435Ug7NcR7Qj5mhU9xwr8TPsyfG/mtBVPsTLt13C8JHMuiqL0aEHrFHP41Az4XIX0eazDgbRHC2Ne8ftXujCNoV0u7m3BvWboa9L2EeN4Vtw5iavVIzr3IGbwBhvS4QUuZpIw7cPZAsvoefQ+ZjBD5lu0GtuDOJTed3G7iLQr96aOP3CTS2xj2YLveOXDYslmYLmQCuJujW3guLwZZPQ7ZBaWC00Q9wO9Y+n4I3dkSeox1DbZrPaEoc/Hrsa2DTQnlsNUED41tmGLhYrq5pU+FUSAGttOLIetIPxKbONjFvQMlL4VtIEC22+J68DgfYdcBtqEIOldr+g9Keoba2hM/+8EfwAPnlMZzTICMgAAAABJRU5ErkJggg=="/>
+                                 Vue</h3>
+                            <p>Nível intermediário.</p> 
+                        </div>
+                        <div>
+                            <h3><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAhBJREFUSEu11UvITWEUBuDnT1JKSiJighERAyRFyYgSymVmgJRrGYiEXIoSSe7JgFwnLjFWRii5JkUipchlIiO3vbRO7U5nn/+c/3S+2u1z9v6+9a53rXe9u0eXV0+X42sHYBl2Fddf7MHVVpJrBWACjmEadqM/tuM+1uJVM6BmAEOwD6txEVuKgJ8z2AgcwlKcwk58awTUCKBfZhbZvsUaPKrIcjpOY3SCBNjv8t56gMm4gsHYivNZ896qEEkE2y+IXj2tHagHeIj3WFGU5GcrTSztGYRLRb+GYkYVwJts6JHSwVBMKCcUFCUJZrOzFC9wHUdzf7xbhXHtANzIzaGc5ziM2/lsbipqTgF6F9uwsq8A53CzkOVyXCv15kJK9niy6zOD0PxrDMz+PC5k+hJ3EjhIdcRgISYi7lMLFuMxNksV2a/vlMG9DLiuJIAYxpD1mKx7R00OgP2FenYg5FxbJ7N0CzplsAQnUiXl+QmVxaCFjfTKIDL7mEG+Zoq38AuL83+UZVI2Opr8I5/H9F9OF5hZNQdT0oZHpt6/p4OexeaKyQ42of0D+JQyjnn5vxqZ3YD0+01FzeP3B8zCuwYAkWmUrWZ20Y+mZleOMTzV8aQwr0UIW3iWG0bhYMmuo/Et23V9osNwBvOxt+Q5D7AhgSt9sZUvWu3wvPT+P0W2G0vT29R02wFoGqjqZdcB/gGIfn4ZIl00iQAAAABJRU5ErkJggg=="/>
+                                 NodeJs</h3>
+                            <p>Nível intermediário.</p> 
+                        </div>  
+                            <div><h3><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAcRJREFUSEu11E2ojVEUxvHf9THCJZkgAxOTm48QIwOKa6BMDAwYKaUkhTKUTEwoZaRkohSZyMSVAQoZSIooA1IU+Ur5/thL6+o4nXv2Oefes+t0envfvf57Pc+z14A+r4E+1zcewAZcqR2wV8BU7MKJfgF24iFu9gOwMk+/o1Y83ncr0QFswSYswizcwtuxYN0AjmAVtqf2x3Cn1kWngJBjH1bgNC7ifK14NxIdxXOcxKsiyzDuTyRgGbbiIC5jEGvxowbpVKKoExKdw5Tiw9ME3JhIQNRajxGcwm58TcDq8vwmwf8x23UwhM04ixf4mTvjFs/Ed/zC7wRdKHHdg2eNhHaANYjcP8LnJinep/7RzeN8d7yk7BKudQqI72ZgW0rSaOgcLCgd3sticZh1OJwd/WPUTA5D92I6FpcLNhvTMqq3cQbfsBB3WxleA8Se+fiED7XE9ArYmPmPeRMdxJqbkT3ULEkzpFUHMcD2F02v4wFe5qbJWIp3mZRI0OgKr+Y1GN7Wg+XlMsVgi/UkJ+WkFu1HbL9kRAManoSUowf6u6XmQZi8JEdDfB/PIU/84sTx/xGvM55XO5GoFy/H3FPrYNywP6nQUhlkIl6FAAAAAElFTkSuQmCC"/>
+                                 JAVA</h3>
+                            <p>Nível intermediário.</p>
+                        </div>
+                        </div>  
+                            <div><h3><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAhxJREFUSEvF1UnITnEUBvDfZy5TKQsyZmeDBUWWyrgQSbGxIcoK2RjKUEoimZY2lKkQGRZSipWpiEIsUJZE5umer/PW23Xf97vv4svZvPe+nf/z/M85z3lul16Orl7G1xPBQCzFPEzBeHzHXTzM30v40eqi7Qjm41iCtiv0EVbgMYYizp1pHGhFsAtbO2jfT2zDN4zI5+7jVQQ7sL0D8EbqH8zFVBzC1yqCRYiedhpfsATXMB3DcKNMMKTo5TOM6hD9CtbjVZ7rgw3YVyZYh6NtwN/hedG+33iDBwjwpxVngmB/mSCSQwHNcQ87cQvva1TWrxBHDLyS4C1GN4EcydJr4HanTMDrQkG/sBl7yxXE1GOxIm5jdl3kzFtcKOhCPldW8LEYTAw6YmH2ty7HHhxEzCkidmh3uYIXmJQJg4syP9dAj54fwJPc+saRSoJY72Wpkr41wKPnceY+QoGxaI1Lh8WsLVewEicyaVqaWRXPuMLctmBVbuymUlIs3PDCw46XCQalzsfkzZY33WgG5qSMZ+ElVuNmCTzM7nLO8FOZIN6jRQ0nPJvSi1aMTJu+iotZadmixxaWfj5ncrJBXGV2Mf1YunDG8P1QV4Cew4fSjQekMELSUXEoaWNzTiu7npimdbrGsBspYfH/uHC7D84CHEaQtYtwgBj0qaqknj6Z/bEGM7MVkxMkTO9O8f/1tOiwh8roiaCDDv0ngr/NTmcZscaq5wAAAABJRU5ErkJggg=="/>
+                                 SpringBoot</h3>
+                            <p>Nível intermediário.</p>
+                        </div>                    
+                </div>
+            </div>       
         </div>
     </div>
-    </section>
-<!-- Sobre/Educação -->
+</section>
+
+<!-- Projetos -->
+<section id="projects">
+    <p class="section__text__p1">Veja Meus</p>
+    <h1 class="title">Projetos Recentes <i class="bi bi-cast"></i></h1>
+    <div class="experience-details-container">
+        <div class="about-containers">
+        <div class="details-container color-container">
+            <div class="article-container">
+                <img src="./assets/img/project-FlappyBird.png" alt="PokeVue" class="project-img"/>
+            </div>
+            <h2 class="experience-sub-title project-title">FlappyBird</h2>
+            <div class="btn-container">
+                <button class="btn project-btn" onclick="location.href='https://flappy-bird-game-three.vercel.app/'">
+                    Live demo
+                </button>
+                <button class="btn project-btn" onclick="location.href='https://github.com/Arthiagx/Flappy-Bird-Game'">
+                    GitHub
+                </button>
+            </div>
+        </div>
+        <div class="details-container color-container">
+            <div class="article-container">
+                <img src="./assets/img/project-PokeVue.png" alt="PokeVue" class="project-img"/>
+            </div>
+            <h2 class="experience-sub-title project-title">PokeVue</h2>
+            <div class="btn-container">
+                <button class="btn project-btn" onclick="location.href='https://pokevue-pkdx.vercel.app/'">
+                    Live demo
+                </button>
+                <button class="btn project-btn" onclick="location.href='https://github.com/Arthiagx/pokevue'">
+                    GitHub
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+</section>
+
+<!-- Sobre -->
     <section id="about">
-        <p class="section__text__p1">Saiba mais sobre mim <i class="bi bi-arrow-down-short"></i></p>
-        <p class="title">Educação <i class="bi bi-book"></i></p>
+        <p class="section__text__p1">Saiba mais sobre mim</p>
+        <h1 class="title"><i class="bi bi-arrow-down-short"></i></h1>
         <div class="section-container">
             <!-- <div class="section__pic-container">
                 <img src="./assets/img/about-me.png" alt="Imagem perfil" class="about-pic">
@@ -104,74 +222,61 @@
             <div class="about-details-container">
                 <div class="about-containers">
                     <div class="details-container">                    
-                        <h3>Análise e Desenvolvimento de Sistemas</h3>
-                        <p><strong>Universidade Mogi das Cruzes <br> 2023/2025 (cursando)</strong><p>
-                            Desenvolvimento de habilidades de programação e codificação, analise e modelagem sistemas de informação,
-                            gerenciamento de projetos de TI, compreensão e aplicaçaõ de metodologias ágeis de desenvolvimento de software,
-                            manutenção e suporte a sistemas, comunicação de forma clara e eficiente com usuários e clientes.</p>
+                        <h3>Olá, eu sou <strong>Thiago Henrique!</strong></h3>
+                        <p><br> Acredito que podemos melhorar a vida das pessoas através do trabalho.
+                            A tecnologia serve para melhorar a vida das pessoas, levar informação de qualidade
+                             é a melhor coisa que posso fazer. Sou estudante brasileiro de tecnologia, desenvolvo projetos 
+                             escaláveis e reutilizáveis para facilitar a vida das pessoas.<p>
+
+                            Sou estudante de Análise e Desenvolvimento de Sistemas da Universidade Mogi da Cruzes, onde aprendo desenvolvimento de habilidades
+                             de programação e codificação, analise e modelagem sistemas de informação, gerenciamento de projetos de TI, compreensão e aplicação
+                              de metodologias ágeis de desenvolvimento de software, manutenção e suporte a sistemas, comunicação de forma clara e eficiente com 
+                              usuários e clientes. 
+                              Tenho me dedicado a expandir meu conhecimento em diversas áreas relacionadas ao desenvolvimento de software indo além da minha formação acadêmica.
+                                Procuro constantemente oportunidades para aprimorar minhas habilidades, mergulhando em cursos práticos que abrangem desde HTML5 até programação dinâmica com JavaScript. 
+                                Meu aprendizado também inclui frameworks como React, Vue e Angular, o que me possibila criar interfaces de usuário interativas e responsivas.
+                                Além disso, explorei tecnologias de backend, como Node.js, e bancos de dados relacionais e não relacionais, como MySQL, Postgres e MongoDB.
+                                Estou constantemente em busca de desafios estimulantes que me permitam aplicar e expandir meus conhecimentos, contribuindo de forma significativa para projetos inovadores e colaborativos.
+                            </p>
                     </div>
-                    <div class="details-container">                    
-                        <h3>Java, Programação Orientada a Objetos<p>
-                        </h3>
-                        <p><strong>Udemy <br>2023 (concluído)</strong><p>
-                            Programação Orientada a Objetos e linguagem Java, criação de soluções flexíveis,
-                             extensíveis e testáveis, base sólida teórica e prática, aplicação do conhecimento de orientação 
-                             a objetos na construção de soluções para problemas reais, compreensão de diagramas de classe UML, 
-                             tanto de entidades quanto de serviços, aplicações para desktop com interface gráfica, 
-                             construção de web services usando Spring Boot e boas práticas, acesso a banco de dados NoSQL, 
-                             acesso a banco de dados relacionais com comandos SQL (JDBC) e também com ORM (JPA/Hibernate).</p>
-                    </div>                    
-                    <div class="details-container">                    
-                        <h3>Curso Web Moderno Completo com JavaScript<p>
-                        </h3>
-                        <p><strong>Udemy<br>2023/2024 (concluído)</strong><p>
-                            Aplicações modernas para Web com recursos recursos de HTML 5, CSS 3, Javascript, React, Vue, Bootstrap 4, jQuery, NodeJs.
-                            Paradigmas de programação funcional, orientação a objeto, boas práticas de programação e padrões de projeto, 
-                            aplicações Web baseadas em componentes. Desenvolvimento Fullstack, frontend e backend, banco de dados relacional 
-                            e não relacional NoSQL, MySQL, Postgres e MongoDB, builds Gulp e Webpack.
-                            Angular 9: Componentes, Diretivas, Pipes e Services.</p>
-                    </div>
+                   
                 </div>
             </div>
         </div>
     </section>
-<!-- Experiência -->
-<section id="experience">
-    <p class="section__text__p1">Saiba mais sobre minha jornada profissional <i class="bi bi-arrow-down-short"></i></p>
-    <p class="title">Experiência <i class="bi bi-person-workspace"></i></p>
-    <div class="experience-details-container">
-        <div class="about-containers">
-            <div class="details-container">
-                <h2 class="experience-sub-title">Icomon Tecnologia Ltda.</h2>
-                <div class="article-container">
-                    <article>
-                        <div>
-                            <h3>Auxiliar Administrativo - 2022/2024.</h3>
-                            <p>Criação e atualização de planilhas de controle e registros de documentos, contatos, cadastro de colaboradores nos sistemas internos (Excel).  Assistência Administrativa ao coordenador da área auxiliando nos processos do centro de controle de Distribuidores Gerais(CCDG) por telefone, whatsapp e e-mail. Organização e distribuição de tarefas de rotina(DG) como: instalações e retiradas de linhas telefônicas e internet. Solicitações e aberturas de chamados de requisição ou incidente gerais de tecnologia, predial e centrais.</p>
-                            <h3>Ligador de linhas telefônicas - 2016/2022.</h3>
-                            <p>Identificação e reparos de defeitos internos, instalações, retiradas, upgrades e downgrades de linhas telefônicas e internet nas centrais de distribuidores gerais(DG).</p>
-                        </div>
-                    </article>
-                </div>
-            </div>
-            
-                <div class="details-container">     
-                <h2 class="experience-sub-title">Grupo DPSP.</h2>
-                <div class="article-container">
-                    <article>
-                        <div>
-                            <h3>Auxiliar de Balcão - 2014/2016</h3>
-                            <p>Conferência e separação de medicamentos. Análise e venda de medicamentos adequados conforme pedido ou prescrição, oferecendo alternativas quando possível.</p>                           
-                            <h3>Jovem Aprendiz - 2012/2014.</h3>
-                            <p>Atendimento ao cliente, reposição de estoque e organização das gôndolas e prateleiras. Atendimento ao caixa.</p>  
-                        </div>
-                    </article>
+
+    <footer>
+        <div class="container">
+            <p>Espero que a sua experiência tenha sido ótima e que você volte mais vezes. Obrigado!</p>
+            <p><strong>Quer conversar sobre projetos ou compartilhar ideias?</strong><br> Vamos conversar!</p>        
+            <ul>
+                <a href="https://www.linkedin.com/in/thiago-76a183276/">
+                    <li>
+                        <span class="icon"><i class="bi bi-linkedin"></i></span>
+                    </li>
+                </a>
+                <a href="https://github.com/Arthiagx">
+                    <li>
+                        <span class="icon"><i class="bi bi-github"></i></span>
+                    </li>
+                </a>
+                <a href="mailto:thiago.art95@gmail.com">
+                    <li>
+                        <span class="icon"><i class="bi bi-envelope-fill"></i></span>
+                    </li>
+                </a>
+                <a href="https://wa.me/5511990026581">
+                    <li>
+                        <span class="icon"><i class="bi bi-whatsapp"></i></span>
+                    </li>
+                </a>
                 
-                </div>
-            </div>            
+            </ul>  
+    
+            <p>&copy; 2024 Arthiagx. Todos os direitos reservados.</p>
         </div>
-    </div>
-</section>
+    </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
