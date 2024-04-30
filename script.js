@@ -6,5 +6,5 @@ function toggleMenu() {
 }
 
 function downloadCV() {
-    window.open('CV-TI.pdf');
+    window.open('CV.ADS.pdf');
 }
