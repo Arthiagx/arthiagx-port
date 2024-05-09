@@ -354,8 +354,8 @@ section {
 
 .project-img {
     border-radius: 2rem;
-    width: 90%;
-    height: 90%;
+    width: 250px;
+    height: 250px;
 }
 
 .project-title {
